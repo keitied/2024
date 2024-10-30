@@ -16,6 +16,8 @@ body {
     margin: 0;
     width: 100%;
     background-image: url("背景.jpg");
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
