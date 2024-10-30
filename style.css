@@ -24,14 +24,14 @@ body {
     
     /* タブレット */
     @media (max-width: 768px) {
-        .body {
+        .back {
             height: 300px;
         }
     }
     
     /* スマホ */
     @media (max-width: 425px) {
-        .body {
+        .back {
             height: 200px;
         }
     }
