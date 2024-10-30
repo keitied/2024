@@ -21,7 +21,20 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+    
+    /* タブレット */
+    @media (max-width: 768px) {
+        .back {
+            height: 300px;
+        }
+    }
+    
+    /* スマホ */
+    @media (max-width: 425px) {
+        .back {
+            height: 200px;
+        }
+    }
 
 #container{
     /* 上 | 右 | 下 | 左 */
