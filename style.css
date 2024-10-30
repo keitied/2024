@@ -12,7 +12,7 @@ h1 , h2 , h3 {
 
 body {
     font-family: 'Ubuntu Mono',"ヒラギノ丸ゴ ProN" ,monospace ;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     margin: 0;
     width: 100%;
     background-image: url("背景.jpg");
