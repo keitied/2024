@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+
+/* h1,h2のリセットcss */
+
+h1 , h2 , h3 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu Mono',"ヒラギノ丸ゴ ProN" ,monospace ;
+    background-color: #fdfdfd;
+    margin: 0;
+    width: 100%;
+    background-image: url("https://www.sejuku.net/blog/wp-content/uploads/2018/05/shutterstock_609815726-1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#container{
+    /* 上 | 右 | 下 | 左 */
+    margin: 0px 8px 8px 8px;
+}
+
+
+/* ロゴの表現 */
+
+.logo_area{
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.logo_name{
+    font-family: 'Allura';
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 13rem;
+    height: 4rem;
+    display: inline-block;
+
+    z-index: 1;
+}
+
+.logo_year{
+    font-family: 'Allura';
+    font-weight: bold;
+    font-size: 1.25rem;
+    display: inline-block;
+    
+    
+}
+
+.promotion_logo{
+    position: relative;
+    text-align: right;
+}
+
+.promotion_logo_title{
+    font-size: 12px;
+    font-family: "Sawarabi Mincho";
+
+    display: inline;
+    
+    margin-bottom: 5px;
+
+
+}
+
+.promotion_logo_img{
+    display: inline;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.promotion_logo_link{
+    position: relative;
+}
+
+.promotion_logo_link_thx{
+    position: relative ;
+}
+
+.promotion_logo_img_thx{
+    vertical-align: middle;
+
+    top: 0;
+    bottom: 0;
+
+    display: inline;
+    height: 22px;
+}
+
+
+.logo_line::after {
+    background-color: rgba(107, 73, 73, 0.651);
+    border: none;
+    content: '';
+    width: 13rem;
+    height: 10%;
+    position: absolute;
+    left: calc(50% - 8.5rem);
+    bottom: 10px;
+    transform: rotate(-3deg);
+    border-radius: 50% 50%;
+    z-index: -2;
+
+}
+
+
+/* 線の描画 */
+
+.logo_line::before {
+    background-color: #fdfdfd;
+    /* background-color: #ff1b1b; */
+    border: none;
+    content: '';
+    width: 13rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+
+    animation-delay: 1.0s;
+    
+    overflow: hidden;
+
+    animation: logo_name 1s cubic-bezier(.4, 0, .2, 1) forwards;
+    animation: logo_name_left 1s cubic-bezier(0.5, 0, 1, 0) forwards;
+    
+}
+
+@keyframes logo_name{
+    0% {
+        transform: translateX(0%); /* 初期位置、左端から開始 */
+    }
+    100% {
+        transform: translateX(100%); /* 100%位置、右端に移動 */
+    }
+}
+
+@keyframes logo_name_left{
+    0% {
+        width: 100%; /* 初期幅、全幅から開始 */
+    }
+    100% {
+        width: 0; /* 幅を0に変更 */
+    }
+}
+
+
+
+.box_logo{
+    position: relative;
+    font-family: 'Allura';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.box_logo::after{
+    display: inline-block;
+    background-color: rgba(107, 73, 73, 0.651);
+    border: none;
+    content: '';
+    width: 3em ;
+    height: 0.1em;
+    bottom: 0.4em;
+    left: 0;
+    position: absolute;
+    transform: rotate(-5deg);
+    border-radius: 50% 50%;
+}
+
+.box_logo_year{
+    font-family: 'Allura';
+    font-weight: bold;
+}
+
+.box_logo::after{
+    background-color: rgba(107, 73, 73, 0.651);
+    border: none;
+    content: '';
+    width: 3.3em ;
+    height: 0.1em;
+    bottom: 0.4em;
+    left: 0;
+    position: absolute;
+    transform: rotate(-4.5deg);
+    border-radius: 50% 50%;
+    z-index: -1;
+
+    
+}
+
+.sat{
+    color: #004ffa;
+}
+
+.sun{
+    color: #ff1b1b;
+}
+
+/* メニュー表 */
+
+h3{
+    display:inline-block;
+    border-left: 3px solid rgba(107, 73, 73, 0.651);
+    background-color: rgba(107, 73, 73, 0.2);
+}
+
+.promotion_logo_img_menu{
+    vertical-align: middle;
+
+    top: 0;
+    bottom: 0;
+
+    display: inline;
+    height: 30px;
+}
+
+.menu_list{
+    padding-left:0;
+  }
+  
+.description_list{
+    list-style:none;
+  }
+
+.description_img{
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+.time_table{
+    display: none;
+}
+
+/* styles.css */
+
+.tab_wrap{
+    width:calc(100% - 10px); 
+    margin:0px auto;
+
+    position: relative;
+
+    /* display: none; */
+}
+
+
+
+.tab_area{
+    font-size:0; 
+    padding:0 0;
+}
+
+.tab_area label{
+    width:110px; 
+    display:inline-block; 
+    padding:14px 0 12px; 
+    color:#fff; 
+    background:#909090; 
+    text-align:center; 
+    font-size:13px; 
+    cursor:pointer; 
+    transition:ease 0.2s opacity; 
+    border-top-left-radius:10px; 
+    border-top-right-radius:10px; 
+    vertical-align:bottom; 
+    transition:ease 0.2s; 
+    margin:0px 1px 0 0;
+}
+
+.tab1_label{
+    color: blue;
+}
+
+@media (hover: hover) {
+    /* hover指定できるPCを想定したスタイル */
+    .tab_area label:hover{
+        opacity:0.5;
+    }
+    }
+
+
+.tab_panel{
+    width:100%; 
+    padding:80px 0; 
+    /* display:none; */
+}
+
+.tab_panel p{
+    font-size:14px; 
+    letter-spacing:1px; 
+    text-align:center;
+}
+
+.panel_area{
+    background:#ffffff; 
+    border-bottom-right-radius:10px; 
+    border-bottom-left-radius:10px; 
+    
+    border-top:8px solid #eee;
+
+}
+
+.tab_panel{
+    width:100%; 
+    padding:0 0; 
+    display:none;
+    border-left: 1px #000;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+}
+
+.tab_panel p{
+    font-size:14px; 
+    letter-spacing:1px; 
+    text-align:center;
+}
+
+.tab_area label.active{
+    background:#fff; 
+    color:#000;
+}
+
+.tab_panel.active{
+    display:block;
+}
+
+
+
+input[type="radio"]{
+    display:none;
+}
+
+#tab1:checked ~ .tab_area .tab1_label{
+    background:#eee; 
+    color:#004ffa;
+    font-size: 1rem;
+    padding:14px 0 16px;
+
+    border-top: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+
+#tab1:checked ~ .panel_area #panel1{
+    display:block;
+}
+
+#tab2:checked ~ .tab_area .tab2_label{
+    background:#eee; 
+    color:#ff1b1b;
+    font-size: 1rem;
+    padding:14px 0 16px;
+
+    border-top: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+
+#tab2:checked ~ .panel_area #panel2{
+    display:block;
+}
+
+/* テーブルのスタイルを追加 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+    color: #000;
+
+    font-family: "Sawarabi Mincho",'Ubuntu Mono',"ヒラギノ丸ゴ ProN" ,"monospace";
+    font-size: 16px;
+}
+
+table th, table td {
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #ccc;
+
+}
+
+.time{
+    width: 2em;
+}
+
+.performer{
+    width: 8.5em;
+}
+
+/* ヘッダ行の下線 */
+#table1  thead  tr  th, #table2 thead  tr  th{
+    border-bottom: 3px double rgb(136, 170, 182);
+}
+
+/*ボックスデザイン*/
+/*少しずらしたボックス*/
+
+.design_box{
+    margin: 2em auto;
+    padding:2em;/*内側の余白*/
+    background: none;/*元のボックス背景色なし*/
+    border:1px solid #ccc ;/*線の太さ・種類・色*/
+    position: relative;/*配置（基準）*/
+    font-family: "Sawarabi Mincho";
+}
+
+.design_box:after{
+    background-color:#eee;/*ずらしたボックスの背景色*/
+    border:none;
+    content: '';
+    position: absolute;/*配置（ここを動かす）*/
+    top: 7px;/*上から7pxずらす*/
+    left: 7px;/*左から7pxずらす*/
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.design_box_title{
+
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px 10px;
+
+    font-size: 16px;
+}
+
+
+/* 順に表示 */
+
+.fadeUp {
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes fadeUpAnime{
+    from {
+    opacity: 0;
+    transform: translateY(100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+    
+    /* アニメーションスタートの遅延時間を決めるCSS*/
+
+.delay-time00{
+    animation-delay: 0s;
+}
+    
+.delay-time02{
+    animation-delay: 0.2s;
+}
+    
+.delay-time04{
+    animation-delay: 0.4s;
+}
+
+.delay-time06{
+    animation-delay: 0.6s;
+}
+
+.delay-time08{
+    animation-delay: 0.8s;
+}
+
+.delay-time10{
+    animation-delay: 1.0s;
+}
+
+
+
+
+/* 交互の背景色を設定 */
+table tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* 著作権表記 */
+
+.copyright{
+    margin: 5px;
+    text-align: right;
+    font-size: 1em;
+}
+
+.copyright_logo{
+    position: relative;
+    font-family: 'Allura';
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.copyright_logo::after{
+    background-color: rgba(107, 73, 73, 0.651);
+    border: none;
+    content: '';
+    width: 3em ;
+    height: 0.1em;
+    bottom: 0.4em;
+    left: 0;
+    position: absolute;
+    transform: rotate(-5deg);
+    border-radius: 50% 50%;
+    z-index: -1;
+}
+
+.flier{
+    width: 100%;
+}
