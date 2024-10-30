@@ -14,7 +14,8 @@ body {
     font-family: 'Ubuntu Mono',"ヒラギノ丸ゴ ProN" ,monospace ;
     /*background-color: #fdfdfd;*/
     margin: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: url("背景.jpg");
     background-position: center center;
     background-size: cover;
